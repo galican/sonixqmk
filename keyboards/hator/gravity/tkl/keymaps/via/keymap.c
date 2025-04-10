@@ -43,31 +43,62 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                  |LCTRL| LGUI| LALT |            SPACE            | RALT| RGUI | FN | RCTRL | |LFT |DWN |RGT |
                  +--------------------------------------------------------------------------+----------------+
 */
-    /*  Row:        0           1          2          3        4        5        6         7        8        9          10         11         12         13         14         15         16    */
-    [0] = {     {   KC_ESC,     KC_F1,     KC_F2,     KC_F3,   KC_F4,   KC_F5,   KC_F6,    KC_F7,   KC_F8,   KC_F9,     KC_F10,    KC_F11,    KC_F12,    KC_NO,     KC_PSCR,   KC_SCRL,   KC_PAUS},
-                {   KC_GRV,     KC_1,      KC_2,      KC_3,    KC_4,    KC_5,    KC_6,     KC_7,    KC_8,    KC_9,      KC_0,      KC_MINS,   KC_EQL,    KC_BSPC,   KC_INS,    KC_HOME,   KC_PGUP},
-                {   KC_TAB,     KC_Q,      KC_W,      KC_E,    KC_R,    KC_T,    KC_Y,     KC_U,    KC_I,    KC_O,      KC_P,      KC_LBRC,   KC_RBRC,   KC_BSLS,   KC_DEL,    KC_END,    KC_PGDN},
-                {   KC_CAPS,    KC_A,      KC_S,      KC_D,    KC_F,    KC_G,    KC_H,     KC_J,    KC_K,    KC_L,      KC_SCLN,   KC_QUOT,   KC_NO,     KC_ENT,    KC_MPRV,   KC_MNXT,   KC_NO},
-                {   KC_LSFT,    KC_NO,     KC_Z,      KC_X,    KC_C,    KC_V,    KC_B,     KC_N,    KC_M,    KC_COMM,   KC_DOT,    KC_SLSH,   KC_NO,     KC_RSFT,   KC_NO,     KC_UP,     KC_NO},
-                {   KC_LCTL,    KC_LGUI,   KC_LALT,   KC_NO,   KC_NO,   KC_NO,   KC_SPC,   KC_NO,   KC_NO,   KC_NO,     KC_RALT,   MO(1),     KC_APP,   KC_RCTL,   KC_LEFT,   KC_DOWN,   KC_RGHT}
-              },
-
-    /*  Row:        0          1          2          3        4        5        6         7        8        9          10         11         12         13         14         15         16        */
-    [1] =   {   {   QK_BOOT,  KC_WHOM,  KC_CALC,  KC_MYCM,  KC_MAIL,  RGB_VAD,  RGB_VAI,  KC_MPRV,  KC_MPLY,  KC_MNXT,  KC_MUTE,   _______,   _______,  _______,  KC_PSCR,  KC_SLEP,   RGB_TOG },
-                {   _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,   _______,   _______,   _______,  _______,    KC_NO,  RGB_M_P,  RGB_HUI },
-                {   _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,   _______,   _______,   _______,  _______,    KC_NO,  _______,  RGB_SPI },
-                {   _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,   _______,   _______,     KC_NO,  _______,    KC_CONTROL_PANEL,  _______,    KC_NO },
-                {   _______,    KC_NO,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,   _______,   _______,     KC_NO,  _______,  _______,  KC_VOLU,  RGB_SAI },
-                {   _______,  KC_LALT,  KC_LGUI,    KC_NO,    KC_NO,    KC_NO,  NK_TOGG,    KC_NO,    KC_NO,    KC_NO,   _______,   _______,   _______,  _______,  RGB_MODE_REVERSE,   KC_VOLD,    RGB_MODE_FORWARD }
-            },
+    [0] = LAYOUT(
+        KC_ESC,           KC_F1,   KC_F2,   KC_F3,   KC_F4,   KC_F5,   KC_F6,   KC_F7,   KC_F8,   KC_F9,   KC_F10,  KC_F11,  KC_F12,     KC_PSCR, KC_SCRL, KC_PAUS,
+        KC_GRV,  KC_1,    KC_2,    KC_3,    KC_4,    KC_5,    KC_6,    KC_7,    KC_8,    KC_9,    KC_0,    KC_MINS, KC_EQL,  KC_BSPC,    KC_INS,  KC_HOME, KC_PGUP,
+        KC_TAB,  KC_Q,    KC_W,    KC_E,    KC_R,    KC_T,    KC_Y,    KC_U,    KC_I,    KC_O,    KC_P,    KC_LBRC, KC_RBRC, KC_BSLS,    KC_DEL,  KC_END,  KC_PGDN,
+        KC_CAPS, KC_A,    KC_S,    KC_D,    KC_F,    KC_G,    KC_H,    KC_J,    KC_K,    KC_L,    KC_SCLN, KC_QUOT,          KC_ENT,     KC_MPLY, KC_MUTE,
+        KC_LSFT,          KC_Z,    KC_X,    KC_C,    KC_V,    KC_B,    KC_N,    KC_M,    KC_COMM, KC_DOT,  KC_SLSH,          KC_RSFT,             KC_UP,
+        KC_LCTL, KC_LGUI, KC_LALT,                            KC_SPC,                             KC_RALT, MO(1),   KC_APP,  KC_RCTL,    KC_LEFT, KC_DOWN, KC_RGHT
+    ),
+    [1] = LAYOUT(
+	    EE_CLR,             KC_VOLD,  KC_VOLU,   KC_MUTE,    KC_MPLY,    KC_MYCM,    KC_WHOM,    KC_WFAV,    KC_CPNL,    KC_CALC,    KC_MAIL, KC_BRID,  KC_BRIU,      RGB_HUD,  RGB_TOG,   RGB_HUI,
+		QK_BOOT,  _______,  _______,  _______,   _______,    _______,    _______,    _______,    _______,    _______,    _______,    _______, _______,  _______,      _______,  RGB_MOD,   _______,
+		NK_TOGG,  _______,  _______,  _______,   _______,    _______,    _______,    _______,    _______,    _______,    _______,    _______, _______,  _______,      RGB_M_T,  RGB_M_SN,  RGB_M_X,
+		_______,  _______,  _______,  _______,   _______,    _______,    _______,    _______,    _______,    _______,    _______,    _______,           _______,      _______,   _______,
+		_______,            _______,  _______,   _______,    _______,    _______,    _______,    _______,    _______,    _______,    _______,           _______,                 RGB_VAI,
+		_______,  AG_LSWP,  AG_LNRM,                                     _______,                                        _______,    _______, GU_TOGG,  _______,      RGB_SPD,   RGB_VAD,  RGB_SPI
+    )
 
 };
 
-bool rgb_matrix_indicators_advanced_user(uint8_t led_min, uint8_t led_max) {
+uint8_t r = 0;
+uint8_t g = 0;
+uint8_t b = 0;
+	
+bool rgb_matrix_indicators_advanced_kb(uint8_t led_min, uint8_t led_max) {
+    if (!rgb_matrix_indicators_advanced_user(led_min, led_max)) {
+        return false;
+    }
     if (host_keyboard_led_state().caps_lock) {
-        RGB_MATRIX_INDICATOR_SET_COLOR(13, 255, 255, 255); // assuming caps lock is at led #13 (rbg)
+		r = 100;
     } else {
-        RGB_MATRIX_INDICATOR_SET_COLOR(13, 0, 0, 0);
+		r = 0;
+	}
+	if (host_keyboard_led_state().scroll_lock) {
+		g = 100;
+    } else {
+		g = 0;
+	}
+	if (keymap_config.no_gui) {
+		b = 100;
+	} else {
+		b = 0;
+	}
+	RGB_MATRIX_INDICATOR_SET_COLOR(13, r, g, b);
+	if (get_highest_layer(layer_state) > 0) {
+        uint8_t layer = get_highest_layer(layer_state);
+
+        for (uint8_t row = 0; row < MATRIX_ROWS; ++row) {
+            for (uint8_t col = 0; col < MATRIX_COLS; ++col) {
+                uint8_t index = g_led_config.matrix_co[row][col];
+
+                if (index >= led_min && index < led_max && index != NO_LED &&
+                keymap_key_to_keycode(layer, (keypos_t){col,row}) > KC_TRNS) {
+                    rgb_matrix_set_color(index, RGB_RED);
+                }
+            }
+        }
     }
     return false;
 }
