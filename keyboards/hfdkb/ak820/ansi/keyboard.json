@@ -1,0 +1,9 @@
+{
+    "keyboard_name": "AK820 PRO",
+    "processor": "SN32F299F",
+    "bootloader": "sn32-dfu",
+    "matrix_pins": {
+        "cols": ["A8"],
+        "rows": ["D11"]
+    }
+}

@@ -1,0 +1,43 @@
+{
+    "manufacturer": "QMK",
+    "maintainer": "qmk",
+    "usb": {
+        "vid": "0xFEED",
+        "pid": "0x6465",
+        "device_version": "0.0.1"
+    },
+    "diode_direction": "COL2ROW",
+    "features": {
+        "bootmagic": true,
+        "command": false,
+        "console": false,
+        "mousekey": true,
+        "extrakey": true,
+        "nkro": true
+    },
+    "qmk": {
+        "locking": {
+            "enabled": false,
+            "resync": false
+        }
+    },
+    "layouts": {
+        "LAYOUT": {
+            "layout": [
+                {"x": 0, "y": 0, "matrix": [0, 0]}
+            ]
+        }
+    },
+    "led_matrix": {
+        "driver": "snled27351",
+        "layout": [
+            {"matrix": [0, 0], "x": 0, "y": 0, "flags": 1}
+        ]
+    },
+    "rgb_matrix": {
+        "driver": "snled27351",
+        "layout": [
+            {"matrix": [0, 0], "x": 0, "y": 0, "flags": 1}
+        ]
+    }
+}
