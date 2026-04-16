@@ -1,6 +1,9 @@
 {
     "manufacturer": "QMK",
-    "maintainer": "qmk",
+    "maintainer": "lalalademaxiya",
+    "keyboard_name": "AK820 PRO",
+    "processor": "SN32F299F",
+    "bootloader": "sn32-dfu",
     "usb": {
         "vid": "0xFEED",
         "pid": "0x6465",
@@ -15,29 +18,11 @@
         "extrakey": true,
         "nkro": true
     },
-    "qmk": {
-        "locking": {
-            "enabled": false,
-            "resync": false
+    "eeprom": {
+        "driver": "wear_leveling",
+        "wear_leveling": {
+            "driver": "embedded_flash",
+            "backing_size": 8192
         }
-    },
-    "layouts": {
-        "LAYOUT": {
-            "layout": [
-                {"x": 0, "y": 0, "matrix": [0, 0]}
-            ]
-        }
-    },
-    "led_matrix": {
-        "driver": "snled27351",
-        "layout": [
-            {"matrix": [0, 0], "x": 0, "y": 0, "flags": 1}
-        ]
-    },
-    "rgb_matrix": {
-        "driver": "snled27351",
-        "layout": [
-            {"matrix": [0, 0], "x": 0, "y": 0, "flags": 1}
-        ]
     }
 }
