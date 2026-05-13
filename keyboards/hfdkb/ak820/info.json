@@ -16,13 +16,41 @@
         "console": false,
         "mousekey": true,
         "extrakey": true,
-        "nkro": true
+        "nkro": true,
+        "rgb_matrix": true
     },
     "eeprom": {
         "driver": "wear_leveling",
         "wear_leveling": {
             "driver": "embedded_flash",
             "backing_size": 8192
+        }
+    },
+    "rgb_matrix": {
+        "driver": "sn32f2xx",
+        "react_on_keyup": true,
+        "sleep": true,
+        "animations": {
+            "gradient_left_right": true,
+            "breathing": true,
+            "band_sat": true,
+            "band_val": true,
+            "cycle_all": true,
+            "cycle_left_right": true,
+            "dual_beacon": true,
+            "rainbow_beacon": true,
+            "raindrops": true,
+            "hue_breathing": true,
+            "hue_wave": true,
+            "typing_heatmap": true,
+            "digital_rain": true,
+            "solid_reactive_simple": true,
+            "solid_reactive": true,
+            "splash": true,
+            "multisplash": true,
+            "solid_splash": true,
+            "solid_multisplash": true,
+            "pixel_rain": true
         }
     }
 }

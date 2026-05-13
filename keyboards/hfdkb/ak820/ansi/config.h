@@ -13,14 +13,18 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
- 
+
 #pragma once
 
-#define ADC_PIN C0
-#define ADC_RESOLUTION 12
+// #define ADC_PIN C0
+// #define ADC_RESOLUTION 12
 
-#define I2C_DRIVER I2CD0
-#define I2C1_SCL_PIN A6
-#define I2C1_SDA_PIN A7
-#define I2C1_OPMODE OPMODE_I2C
-#define I2C1_CLOCK_SPEED 400000
+// #define I2C_DRIVER I2CD0
+// #define I2C1_SCL_PIN A6
+// #define I2C1_SDA_PIN A7
+// #define I2C1_OPMODE OPMODE_I2C
+// #define I2C1_CLOCK_SPEED 400000
+
+#define RGB_MATRIX_LED_COUNT 96
+
+#define SN32F2XX_RGB_MATRIX_ROW_PINS {A11, B4, B5, A8, A9, D8, D9, D10, D11, D12, D13, D16, D17, D18, C10, C11, C12, C13}
